@@ -51,11 +51,12 @@ class Zombie:
         )
 class Ball:
     def __init__(self):
-        self.x, self.y = 400,100
+        self.x, self.y = random.randint(100,700),60
         self.image = load_image('ball21x21.png')
         self.speed = 5
     def update(self):
         self.y += self.speed
+
     def draw(self):
         self.image.draw(self.x,self.y)
 
@@ -89,7 +90,7 @@ def reset_world():
     zombie = Zombie()
     world.append(zombie)
 
-    ball = Ball()
+    ball=Ball()
     world.append(ball)
 
 

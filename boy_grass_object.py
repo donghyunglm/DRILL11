@@ -58,9 +58,15 @@ class Ball:
         else:
             self.image = load_image('ball41x41.png')
         self.speed = random.randint(5,10)
-    def update(self):
-        self.y += self.speed
 
+    def update(self):
+            self.y +=self.speed
+            radius = self.image.h/2
+            top = 600
+
+            if self.y + radius >= top:
+                self.y = top - radius
+  
     def draw(self):
         self.image.draw(self.x,self.y)
 

@@ -49,7 +49,16 @@ class Zombie:
             self.x, self.y,
             frame_width // 2, frame_height // 2
         )
+class Ball:
+    def __init__(self):
+        self.x, self.y = 400, 0
+        self.image = load_image('ball21xball21.png')
+        self.speed = 5
 
+    def update(self):
+        pass
+    def draw(self)
+        self.image.draw(self.x,self.y)
 
 
 def handle_events():
@@ -80,6 +89,7 @@ def reset_world():
 
     zombie = Zombie()
     world.append(zombie)
+
 
 
 def update_world():

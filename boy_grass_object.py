@@ -65,7 +65,7 @@ class Ball:
             top = 600
 
             if self.y + radius >= top:
-                self.y = top - radius
+                self.y = top - radius*2
   
     def draw(self):
         self.image.draw(self.x,self.y)
